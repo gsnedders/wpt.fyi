@@ -510,7 +510,7 @@ class TestSearch extends WPTFlags(PolymerElement) {
   }
 
   latchQuery() {
-    this.query = (this.queryInput || '').toLowerCase();
+    this.query = (this.queryInput || '');
   }
 
   commitQuery() {
