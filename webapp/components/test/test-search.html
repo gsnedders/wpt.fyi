@@ -466,7 +466,8 @@ suite('<test-search>', () => {
       });
 
       test('does not lowerCase', () => {
-        search_fixture.queryInput = "shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html";
+        search_fixture.queryInput = 'a'; // first set is debounced
+        search_fixture.queryInput = 'shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html';
         return waitingOn(() => search_fixture.structuredQuery)
           .then(() => {
             assert.equal(search_fixture.structuredQuery, {
